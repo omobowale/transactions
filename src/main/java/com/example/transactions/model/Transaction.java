@@ -1,14 +1,14 @@
-package com.example.demo.model;
+package com.example.transactions.model;
 
 import java.time.Instant;
 
 public class Transaction {
     private double amount;
-    private long timestamp; // epoch millis
+    private Instant timestamp; // epoch millis
 
     public Transaction() {}
 
-    public Transaction(double amount, long timestamp) {
+    public Transaction(double amount, Instant timestamp) {
         this.amount = amount;
         this.timestamp = timestamp;
     }
@@ -21,11 +21,11 @@ public class Transaction {
         this.amount = amount;
     }
 
-    public long getTimestamp() {
+    public Instant getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(long timestamp) {
+    public void setTimestamp(Instant timestamp) {
         this.timestamp = timestamp;
     }
 }
